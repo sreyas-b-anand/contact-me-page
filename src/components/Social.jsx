@@ -41,7 +41,7 @@ function Social() {
               p: 2,
             }}
           >
-            <Link target="_blank" rel="noopener">
+            <Link target="_blank" rel="noopener" href="https://www.instagram.com/sre___y___a___s/">
               <IconButton sx={{ backgroundColor: "#2196f3" , transition: 'transform 0.3s ease',
             '&:hover': {
               color: '#8b9dc3',
@@ -55,7 +55,7 @@ function Social() {
                 />
               </IconButton>
             </Link>
-            <Link target="_blank" rel="noopener">
+            <Link target="_blank" rel="noopener" href="https://twitter.com/sre___y___as___/">
               <IconButton sx={{ backgroundColor: "#2196f3" , transition: 'transform 0.3s ease',
             '&:hover': {
               color: '#8b9dc3',
@@ -70,7 +70,7 @@ function Social() {
                 />
               </IconButton>
             </Link>
-            <Link target="_blank" rel="noopener">
+            <Link target="_blank" rel="noopener" href="https://www.linkedin.com/in/sreyas-b-anand">
               <IconButton sx={{ backgroundColor: "#2196f3" , transition: 'transform 0.3s ease',
             '&:hover': {
               color: '#8b9dc3',
