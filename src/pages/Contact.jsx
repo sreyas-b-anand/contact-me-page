@@ -54,142 +54,139 @@ const Contact = () => {
 
   return (
     <>
-      <div>
-        <ButtonAppBar />
+      <ButtonAppBar />
 
-        <Container>
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
+      <Container>
+        <Box
+          component="form"
+          onSubmit={handleSubmit}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: 3,
+            maxWidth: 480,
+            borderRadius: 2,
+            boxShadow: 3,
+            backgroundColor: "#2196f3",
+            mx: "auto",
+            my: 7,
+          }}
+        >
+          <Typography
+            variant="h5"
+            mb={2}
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              flexWrap: "wrap",
-              gap: 3,
-              maxWidth: 480,
-              borderRadius: 2,
-              boxShadow: 3,
-              backgroundColor: "#2196f3",
-              mx: "auto",
-              my: 7,
+              color: "white",
+              fontFamily: "monospace",
+              pt: 4,
             }}
           >
-            <Typography
-              variant="h5"
-              mb={2}
-              sx={{
-                color: "white",
-                fontFamily: "monospace",
-                pt: 4,
-              }}
-            >
-              Contact Me
-            </Typography>
+            Contact Me
+          </Typography>
 
-            <Box
-              component={"div"}
-              sx={{
-                display: "grid",
+          <Box
+            component={"div"}
+            sx={{
+              display: "grid",
 
-                alignItems: "center",
-                flexWrap: "wrap",
-                gap: 2,
-              }}
-            >
-              <Grid container spacing={2} columns={16} >
-                <Grid item xs={8}>
-                  <TextField
-                    required
-                    id="standard-search"
-                    label="First name"
-                    type="text"
-                    variant="standard"
-                    value={firstname}
-                    onChange={(e) => setfirstName(e.target.value)}
-                    sx={{
-                      backgroundColor: "white",
-                      borderRadius: 1,
-                      maxWidth: 450,
-                      color: "#2f2f2f",
-                      ml: 2
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={8}>
-                  <TextField
-                    id="standard-search"
-                    label="Last name"
-                    type="text"
-                    variant="standard"
-                    value={lastname}
-                    onChange={(e) => setlastName(e.target.value)}
-                    sx={{
-                      backgroundColor: "white",
-                      border: "#999999",
-                      maxWidth: 450,
-                      color: "#2f2f2f",
-                     mr : 2,
-                      borderRadius: 1,
-                    }}
-                  />
-                </Grid>
-              </Grid>
-            </Box>
-            <Grid container spacing={2} sx={{ maxWidth: 450 }}>
-              <Grid item xs={12} sx={{mx:2}}>
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 2,
+            }}
+          >
+            <Grid container spacing={2} columns={16}>
+              <Grid item xs={8}>
                 <TextField
                   required
                   id="standard-search"
-                  label="Email"
-                  type="email"
+                  label="First name"
+                  type="text"
                   variant="standard"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  fullWidth
+                  value={firstname}
+                  onChange={(e) => setfirstName(e.target.value)}
                   sx={{
                     backgroundColor: "white",
-                    color: "#2f2f2f",
                     borderRadius: 1,
-                    boxShadow : 2,
-                   
+                    maxWidth: 450,
+                    color: "#2f2f2f",
+                    ml: 2,
                   }}
                 />
               </Grid>
-              <Grid item xs={12} sx={{mx:2}}>
+              <Grid item xs={8}>
                 <TextField
-                  required
                   id="standard-search"
-                  label="Message"
+                  label="Last name"
                   type="text"
                   variant="standard"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  fullWidth
+                  value={lastname}
+                  onChange={(e) => setlastName(e.target.value)}
                   sx={{
                     backgroundColor: "white",
+                    border: "#999999",
+                    maxWidth: 450,
                     color: "#2f2f2f",
+                    mr: 2,
                     borderRadius: 1,
-                   boxShadow : 2
                   }}
                 />
               </Grid>
             </Grid>
-            <Button
-              type="submit"
-              sx={{
-                color: "white",
-                px: 2,
-                backgroundColor: "#004080",
-                mb: 2,
-              }}
-            >
-              Send
-            </Button>
           </Box>
-          <Social />
-        </Container>
-      </div>
+          <Grid container spacing={2} sx={{ maxWidth: 450 }}>
+            <Grid item xs={12} sx={{ mx: 2 }}>
+              <TextField
+                required
+                id="standard-search"
+                label="Email"
+                type="email"
+                variant="standard"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                fullWidth
+                sx={{
+                  backgroundColor: "white",
+                  color: "#2f2f2f",
+                  borderRadius: 1,
+                  boxShadow: 2,
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sx={{ mx: 2 }}>
+              <TextField
+                required
+                id="standard-search"
+                label="Message"
+                type="text"
+                variant="standard"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                fullWidth
+                sx={{
+                  backgroundColor: "white",
+                  color: "#2f2f2f",
+                  borderRadius: 1,
+                  boxShadow: 2,
+                }}
+              />
+            </Grid>
+          </Grid>
+          <Button
+            type="submit"
+            sx={{
+              color: "white",
+              px: 2,
+              backgroundColor: "#004080",
+              mb: 2,
+            }}
+          >
+            Send
+          </Button>
+        </Box>
+        <Social />
+      </Container>
     </>
   );
 };
